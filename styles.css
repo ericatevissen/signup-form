@@ -1,4 +1,8 @@
-html,
+@font-face { 
+    font-family: "norse";  
+    src: url(Norse-Bold.otf)format("opentype"); 
+}
+html, 
 body {
     margin: 0;
 }
@@ -11,16 +15,40 @@ body {
     background-color: #ffffff;
 }
 #background {
-    width: 35%;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 32%;
     background-image: url(background.jpg);
     background-size: cover;
+}
+#attribution a {
+    color: #ffffff;
+}
+#attribution {
+    font-size: 1.1rem;
+}
+#logo-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 170px;
+    width: 100%;
+    font-family: "norse";
+    font-size: 5rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 170px;
+}
+img {
+    height: 90%;
 }
 #content {
     display: flex;
     flex-direction: column;
     padding-top: 100px;
     flex: 1;
-    overflow-y: auto;
 }
 h1 {
     font-size: 1.7rem;
@@ -35,7 +63,7 @@ form {
     padding-left: 42px;
     padding-bottom: 36px;
 }
-h2 {
+form h2 {
     font-size: 1.7rem;
     color: #000919;
     margin-bottom: 0;
@@ -50,6 +78,14 @@ input {
     border: solid 1px rgb(148, 148, 146);
     font-size: 1.2rem;
     width: 24ch;
+}
+input:focus {
+    border: solid 2px #007bff;
+    outline: none;
+}
+input[type="email"]:invalid:focus {
+    border: solid 2px #b91c1c;
+    outline: none;
 }
 .field {
     display: flex;
@@ -76,7 +112,7 @@ button {
 p {
     font-size: 1.2rem;
 }
-a {
+#bottom-container a {
     color: #596d48;
     text-decoration: none;
     font-size: 1.2rem;
