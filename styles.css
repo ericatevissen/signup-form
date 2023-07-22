@@ -122,3 +122,11 @@ p {
     text-decoration: none;
     font-size: 1.2rem;
 }
+@media (max-width: 1000px) {
+    #container {
+        flex-direction: column;
+    }
+    #background {
+        width: 100%;
+    }
+}
